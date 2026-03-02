@@ -1,0 +1,4 @@
+import pgzrun
+WIDTH=444
+HEIGHT=444
+moving_box=Rect
