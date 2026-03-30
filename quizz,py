@@ -1,6 +1,9 @@
 import pgzrun
+import random
 WIDTH=444
 HEIGHT=444
+questions=[]
+q_file="C:/Users/pc/Desktop/Python/Python game developer/questions.txt"
 moving_box=Rect(0, 0, 444, 80)
 answer_box1 = Rect(0, 200, 144, 80)
 question_box = Rect(0, 100, 344, 90)
@@ -12,8 +15,10 @@ timer_box = Rect(360, 110, 80,80)
 def draw():
     screen.clear()
     screen.draw.filled_rect(moving_box, "blue")
+    screen.draw.textbox("Quiz Master",moving_box,color="black")
     screen.draw.filled_rect(answer_box1, "green")
     screen.draw.filled_rect(question_box, "white")
+    screen.draw.textbox(question_storer[0],question_box,color="black")
     screen.draw.filled_rect(answer_box2, "green")
     screen.draw.filled_rect(answer_box3, "green")
     screen.draw.filled_rect(answer_box4, "green")
@@ -23,4 +28,16 @@ def update():
     moving_box.x=moving_box.x-2
     if moving_box.right <0:
         moving_box.left=444
+def question_reader():
+    global questions
+    file_holder=open(q_file,"r")
+    for i in file_holder:
+        questions.append(i)
+    print(questions)
+def question():
+    random.shuffle(questions)
+    return questions.pop (0). split(",")
+question_reader()
+question_storer=question()
+
 pgzrun.go()
