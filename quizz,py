@@ -3,7 +3,7 @@ import random
 WIDTH=444
 HEIGHT=444
 questions=[]
-q_file="C:/Users/pc/Desktop/Python/Python game developer/questions.txt"
+q_file="C:/Users/pc/Desktop/SiderAddons/Python/Python game developer/questions.txt"
 moving_box=Rect(0, 0, 444, 80)
 answer_box1 = Rect(0, 200, 144, 80)
 question_box = Rect(0, 100, 344, 90)
@@ -50,7 +50,9 @@ def question():
 question_reader()
 question_storer=question()
 def on_mouse_down(pos):
+    print(question_storer[5])
     if answer_box1.collidepoint(pos):
+        print("answer_box1")
         if question_storer[5]==1:
             correct_answer()
         else:
@@ -75,7 +77,16 @@ def correct_answer():
     score=score+1
     if questions:
         question_storer=questions()
-
-
+def Game_Over():
+    global question_storer
+    message = ["Game_Over",f"Score:{score}","{-}","{-}","{-}","0"]
+    question_storer = message
+def timer():
+    global time
+    if time>0:
+        time=time-1
+    else:
+        Game_Over()
+clock.schedule_interval(timer,1)
 
 pgzrun.go()
