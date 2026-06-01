@@ -1,1 +1,10 @@
-20+40=?,30,67,50,60,4
+Who is the King of F1 records?,Lewis Hamilton,Max Verstappen,Fernando Alonso,Sebastian Vettel,1
+How many titles has Lewis Hamilton won?,5,6,7,9,3
+Which team did Hamilton drive for in 2024?,Mercedes,Ferrari,Red Bull,McLaren,1
+Who has the most Pole Positions in F1?,Lewis Hamilton,Max Verstappen,Michael Schumacher,Ayrton Senna,1
+Is Lewis Hamilton the greatest driver ever?,Yes,No,Maybe,Sometimes,1
+How many players on a football field?,9,10,11,12,3
+Who is often called the GOAT of football?,Pele,Messi,Ronaldo,Maradona,2
+Which sport is played with a ball?,Tennis,Football,Swimming,Boxing,2
+How long is a football match in minutes?,45,60,90,120,3
+What color is a red flag in F1?,Red,Green,Yellow,Blue,1
